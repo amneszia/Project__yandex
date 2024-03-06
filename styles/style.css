@@ -182,7 +182,7 @@
   align-items: baseline;
   width: 1100px;
   margin: 0 0;
-  padding-top: 60px;
+  padding: 60px 0 100px 0;
 }
 
 .table__cell {
@@ -225,4 +225,71 @@
   content: "Всемирный банк, 2017";
 }
 
-/*Нуно доделать Элементы с блоком, где встречается банк*/
+/*
+1.Необходимо доделать Элементы с блоком, где встречается банк
+2. Нужно привести код в порядок - почистить, оптимизировать структуру кода
+3. Добавить необходимые модификаторы
+*/
+
+/*Section: Feynman */
+
+.feynman {
+  position: relative;
+  background-color: #f2f2f2;
+  z-index: -1;
+  height: 890px;
+}
+
+.feynman__title {
+  position: relative;
+  width: 648px;
+  padding: 100px 0 70px 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.feynman__subtitle {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 2;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  color: #2f80ed;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link_active {
+  text-decoration: none;
+}
+
+/*
+1.Нужно добавить стрелочку с таким же цветом
+2. Возможно решение через блочный <span> с добавлением картинки
+*/
+
+.feynman-content__img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 867px;
+  height: 637px;
+}
+
+.arrow::after {
+  content: " \2192";
+}
