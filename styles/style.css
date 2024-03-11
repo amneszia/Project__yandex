@@ -11,29 +11,25 @@
 }
 
 .header {
-  position: relative;
   display: flex;
+  position: relative;
   height: 100vh;
-  /*Check about vh value in documentation*/
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
-  /*border: 2px solid #f452a0;*/
-  /*выше установили границы блока*/
 }
 
 .header__title {
   display: flex;
   align-self: center;
-  position: absolute;
-  z-index: 2;
-  left: 64px;
+  align-items: center;
   width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
+  padding-left: 64px;
   margin: 0 0;
+  z-index: 2;
 }
 
 .header__subtitle {
@@ -45,9 +41,9 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0 0;
+  z-index: 2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   top: 64px;
@@ -72,17 +68,13 @@
   text-decoration: none;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-
-.logo {
-  width: 228px;
-  height: 32px;
-}
-
-.header_place_logo {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
+  width: 228px;
+  height: 32px;
+  background-image: url("/images/logo_place_header.svg");
 }
 
 /*Section: Description*/
@@ -91,22 +83,21 @@
   display: flex;
   justify-content: center;
   padding: 100px 0;
-  /*Check padding, idk good practice is it or not*/
 }
 
-.two-colums {
+.two-columns {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80%;
 }
 
-.two-colums__brief {
+.two-columns__brief {
   align-self: flex-start;
   width: 175px;
 }
 
-.two-colums__article {
+.two-columns__article {
   color: #2f80ed;
   line-height: 1.2;
   font-weight: normal;
@@ -114,29 +105,22 @@
   margin: 0;
 }
 
-.two-colums__main-text {
+.two-columns__main-text {
   flex-direction: column;
   justify-content: center;
   min-width: 764px;
   width: 80%;
 }
 
-/*Have to add min-height upper ?*/
-
-.two-colums__paragraph {
+.two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   padding-bottom: 30px;
+  margin: 0;
 }
 
-.two-colums__paragraph_m {
-  margin: 0 0;
-}
-
-/*Delete the selector upper, doesn't meet layout requirements*/
-
-.two-colums__span-accent {
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
@@ -158,9 +142,8 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
+  padding-bottom: 20px;
 }
-
-/*Нужно выравнять по центру*/
 
 .section-subtitle {
   text-align: center;
@@ -169,40 +152,31 @@
   font-size: 24px;
   font-weight: normal;
   margin: 0 0;
-  padding-top: 20px;
 }
-
-/*С помощью миксов убрать внешний отступ*/
 
 .table {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  align-items: baseline;
+  justify-content: space-between;
   width: 1100px;
-  margin: 0;
   padding: 60px 0 100px 0;
+  margin: 0;
 }
 
 .table__cell {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 250px;
-  margin: 0;
   padding-top: 60px;
-}
-
-.table__cell:nth-child(n + 5) {
-  padding-bottom: 0px;
+  margin: 0;
 }
 
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin: 0;
   padding-bottom: 20px;
+  margin: 0;
 }
 
 .table__text {
@@ -217,38 +191,35 @@
   margin: 0;
 }
 
-/*
-1.Необходимо доделать Элементы с блоком, где встречается банк
-2. Нужно привести код в порядок - почистить, оптимизировать структуру кода
-3. Добавить необходимые модификаторы
-*/
-
 /*Section: Feynman */
 
 .feynman {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
   position: relative;
   background-color: #f2f2f2;
   height: 890px;
 }
 
 .feynman__title {
-  position: relative;
   text-align: center;
-  width: 648px;
-  padding-top: 100px;
-  padding-bottom: 70px;
-  z-index: 2;
-  margin: 0 auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
+  width: 648px;
+  z-index: 2;
+  padding: 100px 0 70px 0;
+  margin: 0;
 }
 
 .feynman__subtitle {
-  position: relative;
-  text-align: center;
-  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  width: auto;
   z-index: 2;
+  margin: 0 0;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -266,13 +237,13 @@
 }
 
 .feynman-picture__img {
+  width: 867px;
+  height: 637px;
   position: absolute;
   z-index: 0;
   left: 0;
   bottom: 0;
   z-index: 1;
-  width: 867px;
-  height: 637px;
 }
 
 .arrow::after {
@@ -330,7 +301,6 @@
 }
 .kaufman__triangle {
   position: absolute;
-  /*Read about overflow*/
   top: 0;
   z-index: 0;
   right: -210px;
@@ -387,11 +357,9 @@
 .footer__column_content_social {
   display: flex;
   flex-direction: column;
-  /*border: 1px solid #f891c2;*/
 }
 
 .footer__social-link {
-  /*Have to check how it works*/
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
@@ -413,7 +381,8 @@
   margin: 0 0;
 }
 
-.logo_footer {
-  width: 228px;
-  height: 32px;
+.logo_place_footer {
+  position: static;
+  color: white;
+  background-image: url("/images/logo_place_footer.svg");
 }
