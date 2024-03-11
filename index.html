@@ -16,11 +16,20 @@
             src="../images/logo_place_header.svg"
             alt="Лого Яндекс"
           />
+          <!--
+            Must be a block logo with modicator key_value:
+            Needs to add two clases in the marking.
+            Reusable block at foote. Fix
+          -->
         </div>
         <h1 class="header__title">Научиться Учиться</h1>
+        <!--
+          Change from absolute position to aligming using flex.
+          This block have to be upper then others
+        -->
         <div class="header__text">
           <h2 class="header__subtitle">
-            Какие совеременные эффективные подходы к обучению вы можете
+            Какие современные эффективные подходы к обучению вы можете
             использовать в своей жизни?
             <a class="header__link arrow" href="#">Узнать</a>
           </h2>
@@ -38,13 +47,24 @@
       <main class="content">
         <section class="description">
           <div class="two-colums">
+            <!--
+              Correct name for block: two-coluMns, not "colums". Fix
+            -->
             <div class="two-colums__brief">
               <h3 class="two-colums__article">Главные проблемы в обучении</h3>
             </div>
+            <!--
+              Doesn't meet layout requirements for block. Fix
+                : layout doesn't have the two_colums_article block.
+            -->
             <div class="two-colums__main-text">
+              <!--
+                Doesn't meet layour requirements for block. Fix
+                  : layout doesn't have the two-colums__paragraph_m.
+              -->
               <div class="two-colums__paragraph">
                 <p class="two-colums__paragraph_m">
-                  Ни в школе, ни в инстититуте нас не учат тому, как правильно
+                  Ни в школе, ни в институте нас не учат тому, как правильно
                   изучать материал. Мы готовимся к экзаменам и учим билеты. Мы
                   тренируемся решать однообразные задачи, чтобы лучше сдать
                   тест, но часто в итоге это не дает нам реального знания.
@@ -62,138 +82,137 @@
                 <p class="two-colums__paragraph_m">
                   Конкретные техники и упражнения помогают изменить подход к
                   обучению, сделать его эффективным и захватывающим. Эти же
-                  техники применяютсяч на примере обучения в Практикуме.
+                  техники применяются на примере обучения в Практикуме.
                 </p>
               </div>
             </div>
           </div>
         </section>
         <section class="digits">
-          <div class="settings-wrap">
             <div class="section-title">Цифры и факты</div>
             <div class="section-subtitle">Про учёбу и мозг</div>
             <div class="table">
-              <div class="table__cell table__cell_m">
-                <h4 class="table__heading table__space-text_pd">
+              <!--
+                Doesn't meet layout requirements:
+                3. Padding between top and bottom blocks must be 60px
+              -->
+              <div class="table__cell">
+                <h4 class="table__heading">
                   86 миллиардов
                 </h4>
                 <p class="table__text">Число нейронов в мозге человека</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">2,1 миллиарда</h4>
-                <p class="table__text table__space-text_pd table__text_bank">
+                <p class="table__text">
                   Число нуждающихся в повышении квалификации
                 </p>
+                <p class="table__text-bank">Всемирный Банк, 2017</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">1000 терабайт</h4>
                 <p class="table__text">Объем памяти человека</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">500 триллионов</h4>
                 <p class="table__text">
                   Число ответственных за обучение нервных синапсов у взрослого
                   человека
                 </p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">420 миллионов</h4>
-                <p class="table__text table__space-text-pd table__text_bank">
+                <!--
+                  Doesn't meet layout requirements: table__text_bank
+                -->
+                <p class="table__text">
                   Число взрослых людей моложе 25 лет, не имеющих образования для
                   трудоустойства
                 </p>
+                <p class="table__text-bank">Всемирный Банк, 2017</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">17-20 лет</h4>
                 <p class="table__text">Пик обучаемости</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">1885 год</h4>
                 <p class="table__text">Открытие кривой забывания</p>
               </div>
-              <div class="table__cell table__cell_m">
+              <div class="table__cell">
                 <h4 class="table__heading">1889 год</h4>
                 <p class="table__text">Открытие условного рефелекса</p>
               </div>
             </div>
-          </div>
         </section>
 
         <section class="feynman">
-          <div class="feynman-page">
             <h2 class="feynman__title">Метод Фейнмана</h2>
             <h3 class="feynman__subtitle">Выучить и не забыть.</h3>
-            <div class="feynman__link">
-              <a href="https://google.com" class="feynman__link_active arrow"
-                >Подробнее</a
-              >
-            </div>
-          </div>
-          <div class="feynman-content">
+            <!--  Doesn't meet layout requirements: block takes all width from parrent -->
+            <a href="#" class="feynman__link arrow">Подробнее</a>
             <img
               src="./images/feynman.png"
               alt="Фейнман. Фотография"
-              class="feynman-content__img"
+              class="feynman-picture__img"
             />
-          </div>
         </section>
         <section class="kaufman">
-          <div class="settings-wrap">
             <div class="section-title_theme_dark section-title">Принципы обучения</div>
             <div class="section-subtitle_theme_dark section-subtitle ">от Джоша Кауфмана</div>
             <div class="table table_theme_dark">
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">1</h4>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
                 <p class="table__text table__text_theme_dark">Выберите привлекательный проект</p>
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">2</h4>
                 <p class="table__text table__text_theme_dark">
                   Сосредоточьтесь на каком-то определенном навыке.
                 </p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">3</h4>
                 <p class="table__text table__text_theme_dark">Определите целевой уровень мастерства.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">4</h4>
                 <p class="table__text table__text_theme_dark">
                   Разбейте навык на элементы.
                 </p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">5</h4>
                 <p class="table__text table__text_theme_dark">
                   Приготовьте всё необходимое для занятий.
                 </p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">6</h4>
                 <p class="table__text table__text_theme_dark">Устраните препятствия для занятий.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">7</h4>
                 <p class="table__text table__text_theme_dark">Выделите специальное время для занятий.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">8</h4>
                 <p class="table__text table__text_theme_dark">Выделите специальное время для занятий.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">9</h4>
                 <p class="table__text table__text_theme_dark">Занимайтесь по расписанию, короткими и интесивными интервалами.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
               </div>
-              <div class="table__cell table__cell_m table__cell_theme_dark">
+              <div class="table__cell table__cell_theme_dark">
                 <h4 class="table__heading table__heading_theme_dark">10</h4>
                 <p class="table__text table__text_theme_dark">Уделяйте внимание количеству и скорости.</p>
                 <!--Убираю заоголовок h4, нужно сделать более универсальным-->
@@ -206,69 +225,70 @@
                   alt="Треугольник Цвета Ясного Неба"
                   class="triangle__image"
                 />
+              </div>
+          </section>
+
+            <footer class="footer">
+              <div class="footer__columns">
+                <div class="footer__column_content_copyright">
+                  <div class="logo_footer">
+                      <img
+                        class="header_place_logo.logo__footer"
+                        src="../images/logo_place_header.svg"
+                        alt="Лого Яндекс"
+                      />
+                  </div>
+                  <div class="footer__author">&copy Виктор Абанькин</div>
+                </div>
+
+                <div class="footer__column_content_info">
+                  <h4 class="footer__column-heading">О Практикуме</h4>
+                  <!--Need to rethink the approach, h4? -->
+                  <div class="footer__column-links">
+                    <nav class="footer__column-link">
+                        <a href="#" class="footer__social-link">Главная</a>
+                        <!-- Navigation to section ID?-->
+                    </nav>
+                    <nav class="footer__column-link">
+                        <a href="#" class="footer__social-link">Концепция</a>
+                    </nav>
+                    <!-- Navigation to section ID?-->
+                    <nav class="footer__column-link">
+                        <a href="#" class="footer__social-link">Наставники</a>
+                        <!-- Navigation to section ID?-->
+                    </nav>
+                  <!-- Need to rethink the approach, check bem, etc.-->
+                  </div>
+                </div>
+
+                <div class="footer__column_content_social">
+                  <h4 class="footer__column-heading">Соцсети</h4>
+                  <nav class="footer__column-links">
+                    <a class="footer__social-link" href="#">
+                      <img class="footer__social-icon" src="./images/instagram_color_white.svg" alt="Инстаграм">
+                        Youtube
+                    </a>
+                  </nav>
+                  <nav class="footer__column-links">
+                    <a class="footer__social-link" href="#">
+                      <img class="footer__social-icon" src="./images/vk_color_white.svg" alt="Вконтакте">
+                        Вконтакте
+                    </a>
+                  </nav>
+                  <nav class="footer__column-links">
+                    <a class="footer__social-link" href="#">
+                      <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Фейсбук">
+                        Facebook
+                    </a>
+                  </nav>
+                </div>
+                <!--The first symbol should looks different (Check maket)-->
+
+              </div>
             </div>
+          </footer>
           </div>
-          </div>
-        </section>
       </main>
-      <footer class="footer">
-          <div class="footer__columns">
-            <div class="footer__column_content_copyright">
-              <div class="logo_footer">
-                  <img
-                    class="header_place_logo.logo__footer"
-                    src="../images/logo_place_header.svg"
-                    alt="Лого Яндекс"
-                  />
-              </div>
-              <div class="footer__author">&copy Виктор Абанькин</div>
-            </div>
 
-            <div class="footer__column_content_info">
-              <h4 class="footer__column-heading">О Практикуме</h4>
-              <!--Need to rethink the approach, h4? -->
-              <div class="footer__column-links">
-                <nav class="footer__column-link">
-                    <a href="#" class="footer__social-link">Главная</a>
-                    <!-- Navigation to section ID?-->
-                </nav>
-                <nav class="footer__column-link">
-                    <a href="#" class="footer__social-link">Концепция</a>
-                </nav>
-                <!-- Navigation to section ID?-->
-                <nav class="footer__column-link">
-                    <a href="#" class="footer__social-link">Наставники</a>
-                    <!-- Navigation to section ID?-->
-                </nav>
-              <!-- Need to rethink the approach, check bem, etc.-->
-              </div>
-            </div>
-
-            <div class="footer__column_content_social">
-              <h4 class="footer__column-heading">Соцсети</h4>
-              <nav class="footer__column-links">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./images/instagram_color_white.svg" alt="Инстаграм">
-                    Youtube
-                </a>
-              </nav>
-              <nav class="footer__column-links">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./images/vk_color_white.svg" alt="Вконтакте">
-                    Вконтакте
-                </a>
-              </nav>
-              <nav class="footer__column-links">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./images/facebook_color_white.svg" alt="Фейсбук">
-                    Facebook
-                </a>
-              </nav>
-            </div>
-            <!--The first symbol should looks different (Check maket)-->
-
-          </div>
-        </div>
-      </footer>
   </body>
 </html>

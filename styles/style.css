@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   height: 100vh;
+  /*Check about vh value in documentation*/
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
@@ -32,6 +33,7 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
+  margin: 0 0;
 }
 
 .header__subtitle {
@@ -42,6 +44,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin: 0 0;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -70,12 +73,6 @@
 }
 
 /* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
 
 .logo {
   width: 228px;
@@ -94,14 +91,14 @@
   display: flex;
   justify-content: center;
   padding: 100px 0;
-  /*border: 2px solid #f452a0;*/
+  /*Check padding, idk good practice is it or not*/
 }
 
 .two-colums {
-  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
 }
 
 .two-colums__brief {
@@ -137,6 +134,8 @@
   margin: 0 0;
 }
 
+/*Delete the selector upper, doesn't meet layout requirements*/
+
 .two-colums__span-accent {
   line-height: 34px;
   font-size: 24px;
@@ -146,14 +145,11 @@
 /*Section: Digits*/
 
 .digits {
-  padding: 100px auto;
-}
-
-.settings-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 100px auto;
 }
 
 .section-title {
@@ -184,36 +180,28 @@
   flex-wrap: wrap;
   align-items: baseline;
   width: 1100px;
-  margin: 0 0;
+  margin: 0;
   padding: 60px 0 100px 0;
 }
 
 .table__cell {
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
   justify-content: space-between;
-  padding-bottom: 60px;
   width: 250px;
+  margin: 0;
+  padding-top: 60px;
 }
 
 .table__cell:nth-child(n + 5) {
   padding-bottom: 0px;
 }
 
-.table__cell_m {
-  margin: 0;
-}
-
-.table__space_text-pd {
-  padding-bottom: 20px;
-}
-
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0;
+  margin: 0;
   padding-bottom: 20px;
 }
 
@@ -221,11 +209,12 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin: 0 0;
+  margin: 0;
 }
 
-.table__text_bank:nth-child(n + 2):after {
-  content: "Всемирный банк, 2017";
+.table__text-bank {
+  padding-top: 20px;
+  margin: 0;
 }
 
 /*
@@ -239,17 +228,17 @@
 .feynman {
   position: relative;
   background-color: #f2f2f2;
-  z-index: -1;
   height: 890px;
 }
 
 .feynman__title {
   position: relative;
-  width: 648px;
-  padding: 100px 0 70px 0;
-  margin: 0 auto;
   text-align: center;
+  width: 648px;
+  padding-top: 100px;
+  padding-bottom: 70px;
   z-index: 2;
+  margin: 0 auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
@@ -258,7 +247,7 @@
 .feynman__subtitle {
   position: relative;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0;
   z-index: 2;
   line-height: 51px;
   font-size: 36px;
@@ -273,23 +262,15 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-}
-
-.feynman__link_active {
   text-decoration: none;
 }
 
-/*
-1.Нужно добавить стрелочку с таким же цветом
-2. Возможно решение через блочный <span> с добавлением картинки
-*/
-
-.feynman-content__img {
+.feynman-picture__img {
   position: absolute;
   z-index: 0;
   left: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 1;
   width: 867px;
   height: 637px;
 }
@@ -299,8 +280,12 @@
 }
 
 .kaufman {
+  display: flex;
   position: relative;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #1f1f1f;
   color: white;
 }
@@ -319,13 +304,15 @@
 }
 
 .table_theme_dark {
+  padding-top: 0;
   padding-bottom: 90px;
   position: relative;
   z-index: 1;
 }
-
 .table__cell_theme_dark {
   width: 200px;
+  color: white;
+  margin: 0 0;
   padding-top: 80px;
   padding-bottom: 0;
 }
@@ -358,18 +345,16 @@
 .footer {
   background-color: #1f1f1f;
   color: white;
-  min-height: 350px;
-
   display: flex;
-  align-items: center;
   justify-content: center;
+  min-height: 350px;
 }
 
 .footer__columns {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: space-between;
+  flex-basis: 711px;
   width: 90%;
   padding: 60px 0 40px 0;
 }
@@ -377,16 +362,12 @@
 .footer__column_content_copyright {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: space-between;
-  flex-basis: 711px;
 }
 
 .footer__column_content_info {
   display: flex;
   flex-direction: column;
-  border: 1px solid #f452a0;
-  flex-basis: content;
 }
 
 .footer__column-heading {
@@ -401,18 +382,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #f452a0;
-}
-
-.footer__column-link {
-  border: 1px solid #f452a0;
 }
 
 .footer__column_content_social {
   display: flex;
   flex-direction: column;
-  border: 1px solid #f891c2;
-  flex-basis: content;
+  /*border: 1px solid #f891c2;*/
 }
 
 .footer__social-link {
@@ -434,7 +409,7 @@
   display: flex;
   line-height: 25px;
   font-size: 18px;
-  padding: 18px;
+  padding: 18px 0;
   margin: 0 0;
 }
 
