@@ -1,0 +1,6 @@
+.two-columns__main-text {
+  flex-direction: column;
+  justify-content: center;
+  min-width: 764px;
+  width: 80%;
+}
