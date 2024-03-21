@@ -3,4 +3,6 @@
   font-size: 60px;
   font-weight: 600;
   padding-top: 90px;
+  margin: 0;
+  /*fix*/
 }

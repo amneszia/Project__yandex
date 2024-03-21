@@ -1,6 +1,6 @@
 .kaufman {
-  display: flex;
   position: relative;
+  display: flex;
   overflow: hidden;
   justify-content: center;
   align-items: center;
